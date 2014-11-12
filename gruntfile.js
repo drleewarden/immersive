@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    'css/site.css' : 'app/styles/sass/site.scss'
+                    'app/css/site.css' : 'app/css/sass/site.scss'
                 }
             }
         },
@@ -82,16 +82,16 @@ module.exports = function (grunt) {
         },
         watch: {
             css: {
-                files: 'app/styles/sass/**/*.scss',
+                files: 'app/css/sass/**/*.scss',
                 tasks: ['sass']
-            },
-
-            files: ['<%= jshint.files %>'],
-            tasks: ['jshint'],
-            karma: {
-                files: ['app/js/**/*.js', 'test-main.js'],
-                tasks: ['karma:unit:run'] //NOTE the :run flag
             }
+
+//            files: ['<%= jshint.files %>'],
+//            tasks: ['jshint']
+//            karma: {
+//                files: ['app/js/**/*.js', 'test-main.js'],
+//                tasks: ['karma:unit:run'] //NOTE the :run flag
+//            }
         },
 
         karma: {
