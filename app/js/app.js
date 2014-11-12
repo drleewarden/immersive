@@ -11,11 +11,11 @@ define([
 
 		// Declare app level module which depends on filters, and services
 		
-		return angular.module('myApp', [
+		return angular.module('immersive', [
 			'ngRoute',
-			'myApp.filters',
-			'myApp.services',
-			'myApp.directives',
-			'myApp.controllers'
+			'immersive.filters',
+			'immersive.services',
+			'immersive.directives',
+			'immersive.controllers'
 		]);
 });
