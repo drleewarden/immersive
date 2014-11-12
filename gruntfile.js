@@ -40,7 +40,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         sass: {
             dist: {
                 files: {
@@ -49,7 +48,7 @@ module.exports = function (grunt) {
             }
         },
         jshint: {
-            files: ['Gruntfile.js', 'app/js/site/**/*.js', 'test/**/*.js'],
+            files: [ 'app/js/site/**/*.js'],
             options: {
                 // options here to override JSHint defaults
                 jquery: true,
@@ -84,10 +83,10 @@ module.exports = function (grunt) {
             css: {
                 files: 'app/css/sass/**/*.scss',
                 tasks: ['sass']
-            }
+            },
 
-//            files: ['<%= jshint.files %>'],
-//            tasks: ['jshint']
+            files: ['<%= jshint.files %>'],
+            tasks: ['jshint']
 //            karma: {
 //                files: ['app/js/**/*.js', 'test-main.js'],
 //                tasks: ['karma:unit:run'] //NOTE the :run flag
