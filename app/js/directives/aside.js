@@ -1,13 +1,19 @@
 /**
  * Created by dleewarden on 13/11/14.
  */
-angular.module('immersive.directives', ['immersive.services'])
-    .directive('dirAside', function () {
-        return {
-            restrict: 'AE',
-            replace: 'true',
-            template: 'template for side nave'
-            //templateUrl: '/wp-content/themes/arcade-basic/library/tpl/iso.html'
 
-        };
-    });
+define(['angular', 'services'], function(angular, services) {
+    /* Directives */
+
+
+    angular.module('immersive.aside', ['immersive.services'])
+        .directive('dirAside', function () {
+            return {
+                restrict: 'AE',
+                replace: 'true',
+                template: '<h3>Hello World!!</h3>'
+                //templateUrl: '/wp-content/themes/arcade-basic/library/tpl/iso.html'
+
+            };
+        });
+});
