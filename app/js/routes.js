@@ -15,6 +15,14 @@ define(['angular', 'app'], function(angular, app) {
             templateUrl: 'app/partials/partial3.html',
             controller: 'MyCtrl3'
         });
+        $routeProvider.when('/home', {
+            templateUrl: 'app/partials/partial3.html',
+            controller: 'MyCtrl3'
+        });
+        $routeProvider.when('/about', {
+            templateUrl: 'app/templates/about.html',
+            controller: 'MyCtrl3'
+        });
 		$routeProvider.otherwise({redirectTo: '/view1'});
 	}]);
 

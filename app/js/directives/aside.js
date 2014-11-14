@@ -11,8 +11,8 @@ define(['angular', 'services'], function(angular, services) {
             return {
                 restrict: 'AE',
                 replace: 'true',
-                template: '<h3>Hello World!!</h3>'
-                //templateUrl: '/wp-content/themes/arcade-basic/library/tpl/iso.html'
+                //template: '<h3>Hello World!!</h3>'
+                templateUrl: 'app/templates/aside.html'
 
             };
         });

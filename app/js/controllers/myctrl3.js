@@ -1,11 +1,25 @@
 define([], function() {
 	return ['$scope', '$http', function($scope, $http) {
 		// You can access the scope of the controller from here
-        $scope.thirdPage = 'welcome to the third page';
+        $scope.thirdPage = ' Welcome to the third page';
+        $http({
+            method: 'GET',
+            url: 'http://jsonip.com/'
+        }).
+            success(function (data) {
 
-		// because this has happened asynchroneusly we've missed
-		// Angular's initial call to $apply after the controller has been loaded
-		// hence we need to explicityly call it at the end of our Controller constructor
+                $scope.infomation = data;
+                console.log(data.ip);
+
+
+                setTimeout(function () {
+
+                }, 500);
+
+            }).error(function () {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+            });
 		$scope.$apply();
 	}];
 });
